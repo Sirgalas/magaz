@@ -1,0 +1,45 @@
+{
+  "name": "pastuhov/php-file-stream",
+  "description": "Big file creation helper. May be used for sitemap.xml or YML files creation.",
+  "keywords": [
+    "sitemap",
+    "export.yml",
+    "YML",
+    "stream"
+  ],
+  "homepage": "https://github.com/pastuhov/php-file-stream",
+  "license": "GPL-2.0",
+  "authors": [
+    {
+      "name": "Kirill Pastukhov",
+      "email": "kirill@pastukhov.su",
+      "homepage": "https://github.com/pastuhov/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php" : ">=5.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit" : "4.*",
+    "scrutinizer/ocular": "~1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "pastuhov\\FileStream\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "pastuhov\\FileStream\\Test\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}

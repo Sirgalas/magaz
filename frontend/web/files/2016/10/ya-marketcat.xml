@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="2016-09-08 18:02">
+<shop>
+<name>Милый дом</name>
+<company>Интернет-магазин Милый Дом - большой выбор постельного белья по доступным ценам, полотенец для всей семьи, а также мужской и женской одежды по самым низким ценам</company>
+<url>http://miliydom.com.ua/</url>
+<currencies>
+    <currency id="UAH" rate="1"/>
+</currencies>
+
+<categories>
+    <category id="46" parentId="3">3D</category>
+    <category id="58" parentId="3">Атлас</category>
+    <category id="59" parentId="3">Атлас-Сатин</category>
+    <category id="12" parentId="4">Банные</category>
+    <category id="60" parentId="5">Бижутерия</category>
+    <category id="23" parentId="6">Блузы/Рубашки</category>
+    <category id="20" parentId="6">Большие размеры</category>
+    <category id="65" parentId="7">Брюки спорт</category>
+    <category id="32" parentId="6">Брюки/лосины</category>
+    <category id="44" parentId="3">Бязь</category>
+    <category id="43" parentId="3">Бязь Gold</category>
+    <category id="42" parentId="3">Бязь Ранфорс</category>
+    <category id="50" parentId="3">Дамаст</category>
+    <category id="47" parentId="3">Детское</category>
+    <category id="69" parentId="7">Джинсы/Брюки</category>
+    <category id="13" parentId="4">Для Лица</category>
+    <category id="51" parentId="6">Комплекты</category>
+    <category id="26" parentId="6">Костюмы</category>
+    <category id="48" parentId="3">Котон</category>
+    <category id="61" parentId="6">Купальники</category>
+    <category id="54" parentId="7">Куртки</category>
+    <category id="53" parentId="6">Куртки/пальто</category>
+    <category id="14" parentId="4">Кухонные</category>
+    <category id="38" parentId="7">Майки</category>
+    <category id="30" parentId="6">Майки/футболки</category>
+    <category id="18" parentId="5">Матрасы</category>
+    <category id="33" parentId="3">Микрофибра</category>
+    <category id="36" parentId="6">Нижнее_белье</category>
+    <category id="62" parentId="6">Ночные рубашки</category>
+    <category id="17" parentId="5">Одеяла</category>
+    <category id="34" parentId="6">Пиджаки</category>
+    <category id="64" parentId="6">Пижамы</category>
+    <category id="21" parentId="6">Платья</category>
+    <category id="11" parentId="4">Пляжные</category>
+    <category id="56" parentId="3">Пододеяльники</category>
+    <category id="16" parentId="5">Подушки</category>
+    <category id="15" parentId="5">Покрывала</category>
+    <category id="66" parentId="3">Поликотон</category>
+    <category id="57" parentId="3">Полисатин</category>
+    <category id="49" parentId="3">Поплин</category>
+    <category id="55" parentId="3">Простыни</category>
+    <category id="28" parentId="6">Сарафаны</category>
+    <category id="45" parentId="3">Сатин</category>
+    <category id="37" parentId="7">Свитера</category>
+    <category id="35" parentId="6">Свитера/кофты</category>
+    <category id="22" parentId="6">Свитшоты/худи</category>
+    <category id="19" parentId="5">Скатерти</category>
+    <category id="24" parentId="6">Спорт</category>
+    <category id="70" parentId="7">Спорт_</category>
+    <category id="27" parentId="6">Туники</category>
+    <category id="39" parentId="7">Футболки</category>
+    <category id="63" parentId="6">Халаты</category>
+    <category id="68" parentId="6">Шубы</category>
+    <category id="52" parentId="6">Юбки</category>
+    <category id="1">Главная</category>
+    <category id="8">Доставка и оплата</category>
+    <category id="6">Женская одежда</category>
+    <category id="9">Контакты</category>
+    <category id="7">Мужская одежда</category>
+    <category id="10">Нет на складе</category>
+    <category id="4">Полотенца</category>
+    <category id="3">Постельное белье</category>
+    <category id="5">Разное</category>
+    <category id="2">Распродажа</category>
+</categories>
+</shop>
+</yml_catalog>

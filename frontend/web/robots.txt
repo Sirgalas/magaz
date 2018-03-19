@@ -1,0 +1,10 @@
+User-agent: *
+Disallow:/cgi-bin/
+Disallow:/admin/
+Disallow:/links.php
+Disallow:/files/
+Disallow:/images/
+Disallow:/stiles/
+Disallow:/subs/
+Host: www.miliydom.com.ua
+Sitemap: http://miliydom.com.ua/sitemap.xml
