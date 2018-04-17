@@ -57,9 +57,9 @@ return [
                     'pattern' => 'news/<id>',
                     'route' => 'post/post/onepost',
                 ],
-                [
+               /* [
                     'class' => 'frontend\components\GodsUrlRule',
-                ],
+                ],*/
             ]
         ],
         'assetManager' => [

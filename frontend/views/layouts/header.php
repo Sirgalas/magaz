@@ -40,11 +40,11 @@ use frontend\widget\menu\Menu;
 <div class="container-fluid pink">
     <div class="row">
         <div class="col-lg-8 col-md-9 col-sm-20 col-xs-7 col-lg-offset-2 col-md-offset-0 rightmenu">
-            <?= Menutest::widget([
+            <?php /*= Menutest::widget([
                 'home'              =>  'Главная',
                 'location'          =>  'HederMenuLeft',
                 'numberCollaps'     =>  1
-            ]);
+            ]);*/
             ?>
         </div>
         <div class="cart col-lg-3 col-md-2 col-sm-24 col-xs-10" id="someCart">
@@ -54,10 +54,10 @@ use frontend\widget\menu\Menu;
             </a>
         </div>
         <div class="col-lg-8 col-md-10 col-sm-20 col-xs-7 rightmenu">
-            <?= Menutest::widget([
+            <?php /*= Menutest::widget([
                 'location'          =>  'HederMenuRight',
                 'numberCollaps'     =>  1
-            ]);
+            ]);*/
             /*?>
 
             <?= Menu::widget(['menu'=>'heder-menu-right','location'=>'header','numberCollaps'=>2]);*/ ?>

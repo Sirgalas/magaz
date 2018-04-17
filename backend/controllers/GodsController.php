@@ -431,26 +431,12 @@ class GodsController extends Controller
     public function actionParserprice()
     {
         $execelparser = new Parser();
-        $url_xml=FrontendSetup::find()->where(['description'=>'url'])->all();
-        foreach ($url_xml as $xml){
-          try{
-                $xmlParse= $execelparser->xmlParcePrice($xml->vaelye,$xml->key_setup);
-              
-           }catch(RuntimeException $ex){
-                return var_dump($ex->getMessage());
-            }
+        try{
+            $xmlParse= $execelparser->actionParser();
+            return var_dump($xmlParse);
+        }catch(\RuntimeException $ex){
+            return var_dump($ex->getMessage());
         }
-        $saveDate=new FrontendSetup([
-            'key_setup'=>'Дата',
-            'vaelye'    => ''.time().'',
-            'description'   =>  'dataXMLParser'
-        ]);
-        $saveDate->save();
-        return $this->render('parser',[
-            'model'     => $execelparser,
-            'priseparser'=>false,
-            'manufacturer'=>false,
-        ]);
     }
 
     public function actionUrlpriceparser(){

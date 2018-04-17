@@ -26,6 +26,11 @@ use yii\helpers\Url;
                             $bascet='';
                             $counter=0;
                             foreach ($sesGoods as $sGoods) {
+                                if($counter==0)
+                                    $bascet.=$sGoods->id.':'.$sGoods->quantity;
+                                else
+                                    $bascet.=',%%,'.$sGoods->id.':'.$sGoods->quantity;
+                                $counter=$counter+1;
                                 $prise=$order->wathPrice($sGoods->prises,$sGoods->sizes->key_feild,$sGoods->gods);
                                 ?>
                             <tr>

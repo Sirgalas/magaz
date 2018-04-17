@@ -2,6 +2,7 @@
 
 namespace backend\controllers;
 
+use common\models\Basket;
 use Yii;
 use common\models\Orders;
 use backend\models\OrdersSearch;
@@ -9,6 +10,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use backend\models\BasketSearch;
 /**
  * OrdersController implements the CRUD actions for Orders model.
  */
@@ -81,6 +83,17 @@ class OrdersController extends Controller
             'model'=>$model
             ]);
         }
+    }
+
+    public function actionView($id)
+    {
+        $searchModel = new BasketSearch();
+        $dataProvider = $searchModel->search(['BasketSearch'=>['order_id'=>$id]]);
+        return $this->render('view', [
+            'model' => $this->findModel($id),
+            'searchModel'=>$searchModel,
+            'dataProvider'=>$dataProvider
+        ]);
     }
 
     /**

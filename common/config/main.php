@@ -26,6 +26,12 @@ return [
             ]
         ]
     ],
+    'aliases' => [
+        '@bower' => '@vendor/bower-asset',
+        '@npm'   => '@vendor/npm-asset',
+        '@YiiNodeSocket' => '@vendor/oncesk/yii-node-socket/lib/php',
+        '@nodeWeb' => '@vendor/oncesk/yii-node-socket/lib/js'
+    ],
     'components' => [
         
         'sypexGeo' => [
@@ -67,10 +73,6 @@ return [
             'class' => 'yii\caching\FileCache'
         ],
     ],
-    'aliases' => [
-        '@YiiNodeSocket' => '@vendor/oncesk/yii-node-socket/lib/php',
-        '@nodeWeb' => '@vendor/oncesk/yii-node-socket/lib/js'
-    ],
     'modules' => [
         'menu'  =>[
             'class' =>  'sirgalas\menu\MenuModule',
@@ -83,7 +85,6 @@ return [
             ],
             'adminPermission' => 'role, permission',
             'admins'=>['Sergalas','zayabelka'],
-            
         ],
 
         'rbac' => 'dektrium\rbac\RbacWebModule',

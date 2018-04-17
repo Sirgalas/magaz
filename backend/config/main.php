@@ -13,13 +13,13 @@ return [
     'bootstrap' => ['log'],
     'components' => [
         'request' => [
-            'baseUrl' => '/admin',
+            //'baseUrl' => '',
             'csrfParam' => '_csrf-backend',
         ],
         'user' => [
             'identityCookie' => [
                 'name'     => '_backendIdentity',
-                'path'     => '/admin',
+                //'path'     => '',
                 'httpOnly' => true,
             ],
         ],
@@ -27,7 +27,7 @@ return [
             'name' => 'BACKENDSESSID',
             'cookieParams' => [
                 'httpOnly' => true,
-                'path'     => '/admin',
+                //'path'     => '',
             ],
         ],
         'log' => [
@@ -46,7 +46,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '' => 'site/index',
+                //'' => 'site/index',
                 '<module:\w+>/<controller:\w+>/<action:(\w|-)+>' => '<module>/<controller>/<action>',
                 '<module:\w+>/<controller:\w+>/<action:(\w|-)+>/<id:\d+>' => '<module>/<controller>/<action>',
                 ['pattern' => 'yandex-market', 'route' => 'yml/default/index', 'suffix' => '.yml'],
@@ -55,13 +55,6 @@ return [
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
-        ],
-        'view' => [
-            'theme' => [
-                'pathMap' => [
-                    '@app/views' => '@backend/views/yii2-app'
-                ],
-            ],
         ],
     ],
     'modules' => [

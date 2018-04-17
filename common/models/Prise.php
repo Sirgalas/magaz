@@ -60,6 +60,11 @@ class Prise extends \yii\db\ActiveRecord
         return $this->hasMany(FrontendSetup::className(),['key_setup'=>'sites']);
     }
 
+    public function getPrices($size){
+        $key=self::$price_size[$size];
+        return $this->$key;
+    }
+
     /**
      * @inheritdoc
      */

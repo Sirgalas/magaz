@@ -818,19 +818,23 @@ class Gods extends \yii\db\ActiveRecord
     }
     public function getThePrice($model){
         //$prise = '';
-
-        if($model->price1!=0){
-            $prise = $model->price1;
-        }elseif($model->price2!=0) {
-            $prise = $model->price2;
-        }elseif($model->priceEvro!=0) {
-            $prise = $model->priceEvro;
-        }elseif($model->priceSem!=0){
-            $prise = $model->priceSem;
+        if(is_object($model)){
+            if($model->price1!=0){
+                $prise = $model->price1;
+            }elseif($model->price2!=0) {
+                $prise = $model->price2;
+            }elseif($model->priceEvro!=0) {
+                $prise = $model->priceEvro;
+            }elseif($model->priceSem!=0){
+                $prise = $model->priceSem;
+            }else{
+                $prise = 0;
+            }
+            return $prise;
         }else{
-            $prise = 0;
+            return 0;
         }
-        return $prise;
+
     }
     public function getCustom($model){
         $params=array();

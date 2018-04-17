@@ -5,7 +5,9 @@ use kartik\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\OrdersSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
+/* @var $dataProvider yii\data\ActiveDataProvider
+ * @var $model common\models\Orders
+ */
 
 $this->title = Yii::t('backend','ORDERS');
 $this->params['breadcrumbs'][] = $this->title;
@@ -28,21 +30,18 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format'=>'raw',
                 'label'=>  Yii::t('backend','dataGoods'),
                 'value'=> function($model,$key){
-                    return $model->getFullRowOrder($key);
+                    return Html::a(Yii::t('backend','Order_number ').count($model->baskets),\yii\helpers\Url::to(['view','id'=>$model->id]));
                 }
             ],
             [
-                'attribute'   =>   'article',
-                'format'      =>    'raw',
-                'header'      =>    Yii::t('backend','ARTICLE'),
-                'value'       =>    function($model){
-                    return $model->theGetValue($model->id,'article');},
-                'filterType'=>GridView::FILTER_SELECT2,
-                'filter'=> $articleDatas,
-                'filterWidgetOptions'=>[
-                    'pluginOptions'=>['allowClear'=>true],
-                ],
-                'filterInputOptions'=>['placeholder'=>Yii::t('backend','SELECT_ARTICLE')]
+                'attribute'=>'image',
+                'format'=>'raw',
+                'label'=>  Yii::t('backend','dataGoodsImage'),
+                'value'=> function($model,$key){
+                    foreach ($model->baskets as $bascet){
+                        return Html::img(Yii::$app->params['url'].'frontend/web/image/'. $bascet->gods->homeImage->path . '' . $bascet->gods->homeImage->name, ['width' => 60]);
+                    }
+                }
             ],
             [
                 'attribute'=>'user_id',
@@ -61,28 +60,16 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             [
-                'attribute'=>'received_sell',
-                'format'=>'raw',
-                'label'=>  Yii::t('backend','DATAORDERS'),
-                'value'=> function($model,$key){
-                    return $model->getReceivedSell($model->received_sell);
-                },
-                'filterType'=>GridView::FILTER_SELECT2,
-                'filter'=> ['0'=>'Новый заказ','1'=>'Принятый','2'=>'Выполненый','3'=>'Отказ','4'=>'Отменен','5'=>'Показать все'],
-                'filterInputOptions'=>['placeholder'=>Yii::t('backend','SELECT_received_sell')]
-            ],
-            [
-                'attribute'  =>  'admin_id',
+                'attribute'  => 'received_sell',
+                'label'     =>  Yii::t('backend','Status'),
                 'format'    =>  'raw',
-                'label'     =>  Yii::t('backend','USERORDERS'),
                 'value'     =>  function($model){
-                    return $model->getAdmin($model->admin_id);
-                }
+                    return $model->status;
+                },
+                 'filterType'=>GridView::FILTER_SELECT2,
+                'filter'=>['0'=>'Новый заказ','1'=>'Принятый','2'=>'Выполненый','3'=>'Отказ','4'=>'Отменен','5'=>'Показать все'],
+                'filterInputOptions'=>['placeholder'=>Yii::t('backend','SELECT_received_sell')]
 
-            ],
-            [
-                'attribute'  => 'comment',
-                'label'     =>  Yii::t('backend','Comment'),
             ],
             
             'datetime:datetime',

@@ -3,9 +3,9 @@ namespace frontend\components;
 
 use common\models\Gods;
 use common\models\Category;
-use yii\web\UrlRuleInterface;
-use yii\base\Object;
-class GodsUrlRule extends Object implements UrlRuleInterface{
+use \yii\web\UrlRule;
+
+class GodsUrlRule extends UrlRule{
     public function createUrl($manager, $route, $params){
         if ($route === 'gods/gods/category') {
             if (isset($params['slug']) && isset($params['page']) && isset($params['per-page'])) {
